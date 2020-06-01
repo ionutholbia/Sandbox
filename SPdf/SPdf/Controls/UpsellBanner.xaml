@@ -6,6 +6,7 @@
              xmlns:local="clr-namespace:SPdf.Controls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
+
     <Border Padding="20, 20, 20, 20" Background="#F5F5F5">
         <Grid>
             <Grid.RowDefinitions>
@@ -18,8 +19,36 @@
                 </Path.Data>
             </Path>
             <StackPanel VerticalAlignment="Center" Grid.Row="1">
-                <TextBlock Text="Free 14-Day Trial for Smallpdf"  TextAlignment="Center" Margin="0, 0, 0, 20"/>
-                <Button Content="START FREE TRIAL" Width="167" Height="54"/> 
+                <TextBlock Text="Free 14-Day Trial for Smallpdf"  TextAlignment="Center" Margin="0, 0, 0, 20" FontSize="30" FontWeight="ExtraLight"/>
+                <Button Content="START FREE TRIAL" Width="167" Height="54">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="#0055FF" />
+                            <Setter Property="Foreground" Value="White" />
+                            <Setter Property="FontWeight" Value="Bold" />
+                            <Setter Property="FontSize" Value="15" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type Button}">
+                                        <Border Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Background" Value="#004CE5"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="5"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
             </StackPanel>
         </Grid>
     </Border>

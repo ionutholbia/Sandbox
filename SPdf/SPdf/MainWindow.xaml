@@ -6,7 +6,15 @@
         xmlns:local="clr-namespace:SPdf.Controls"
         mc:Ignorable="d"
         Title="SmallPdf" Height="450" Width="800">
-        <StackPanel MaxWidth="1056" Margin="20, 0, 20, 0">
+        <StackPanel MaxWidth="1056" Margin="20 0 20 0">
             <local:UpsellBanner />
-        </StackPanel>
+        <local:MainButton 
+            Margin="0 20 0 0"
+            Width="228" 
+            Height="180"
+            Title="Compress PDF"
+            Description="Reduce the size of your PDF without losing quality"
+            ImageSvg="M6,6 L9,18 L6,30 L18,27 L30,30 L27,18 L30,6 L18,9 L6,6 Z M3,3 L18,6.75 L33,3 L29.25,18 L33,33 L18,29.25 L3,33 L6.75,18 L3,3 Z"
+            BackgroundColor="#F23030"/>
+    </StackPanel>
 </Window>

@@ -1,0 +1,18 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:SPdf.Styles">
+
+    <Style x:Key="TextStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="White" />
+    </Style>
+
+    <Style BasedOn="{StaticResource TextStyle}" x:Key="TitleStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+    
+    <Style BasedOn="{StaticResource TextStyle}" x:Key="DescriptionStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontSize" Value="14" />
+    </Style>
+
+</ResourceDictionary>
